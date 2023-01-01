@@ -120,10 +120,7 @@
                     @enderror
                     </div>
                 </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
-                    <button type="submit" class="btn btn-primary">Submit</button>
-                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
             </form>
         </div>
         <div class="inner-width">
