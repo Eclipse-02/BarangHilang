@@ -53,8 +53,11 @@
 
         @yield('content')
 
+        <a href="{{ url('donation-form') }}" class="btn btn-primary btn-rounded position-fixed bottom-0 end-0 m-4">Donasi</a>
+
         <!------------x----------- Site Title ----------x----------->
 
+    </main>
 
     <!-- Jquery Library file -->
     <script src="{{ asset('FP/js/Jquery3.4.1.min.js') }}"></script>

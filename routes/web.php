@@ -4,6 +4,7 @@ use App\Http\Controllers\AdminKehilanganController;
 use App\Http\Controllers\AdminMenemukanController;
 use App\Http\Controllers\KehilanganController;
 use App\Http\Controllers\MenemukanController;
+use App\Http\Controllers\DonationController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -24,6 +25,12 @@ Route::get('/', function () {
 
 Route::resource('menemukans', MenemukanController::class);
 Route::resource('kehilangans', KehilanganController::class);
+
+// Paypal Donation Form
+Route::get( 'donation-form',  [ DonationController::class, 'donationForm' ] );
+Route::get( 'donation/success',  [ DonationController::class, 'donationSuccess' ] )->name('donation.success');
+Route::get( 'donation/cancelled',  [ DonationController::class, 'donationCancelled' ] )->name('donation.cancelled');
+Route::get( 'donation/notify_url',  [ DonationController::class, 'donationNotify' ] )->name('donation.notify');
 
 Auth::routes(['register' => false]);
 
