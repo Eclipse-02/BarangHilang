@@ -28,9 +28,6 @@ Route::resource('kehilangans', KehilanganController::class);
 
 // Paypal Donation Form
 Route::get( 'donation-form',  [ DonationController::class, 'donationForm' ] );
-Route::get( 'donation/success',  [ DonationController::class, 'donationSuccess' ] )->name('donation.success');
-Route::get( 'donation/cancelled',  [ DonationController::class, 'donationCancelled' ] )->name('donation.cancelled');
-Route::get( 'donation/notify_url',  [ DonationController::class, 'donationNotify' ] )->name('donation.notify');
 
 Auth::routes(['register' => false]);
 
